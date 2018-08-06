@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 微信小程序 | Hexo</title>
+  <title>微信小程序（一）：页面跳转 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/微信小程序/index.html">
+  <meta name="description" content="微信小程序 跳转页面的方法详解 备注：所有页面跳转的地址需要在app.json里面pages配置路径 1234&quot;pages&quot;:[  &quot;pages/index&quot;,  &quot;pages/logs/logs&quot;] 小程序提供的 API 跳转wx.navigateTo(OBJECT)123wx.navigateTo(&amp;#123;  url: &apos;page/index?id=1&apos;&amp;#125;); 保留当前页面，跳转">
+<meta name="keywords" content="微信小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序（一）：页面跳转">
+<meta property="og:url" content="http://yoursite.com/2018/08/05/微信小程序/微信小程序（一）：页面跳转/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="微信小程序 跳转页面的方法详解 备注：所有页面跳转的地址需要在app.json里面pages配置路径 1234&quot;pages&quot;:[  &quot;pages/index&quot;,  &quot;pages/logs/logs&quot;] 小程序提供的 API 跳转wx.navigateTo(OBJECT)123wx.navigateTo(&amp;#123;  url: &apos;page/index?id=1&apos;&amp;#125;); 保留当前页面，跳转">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-05T16:07:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="微信小程序（一）：页面跳转">
+<meta name="twitter:description" content="微信小程序 跳转页面的方法详解 备注：所有页面跳转的地址需要在app.json里面pages配置路径 1234&quot;pages&quot;:[  &quot;pages/index&quot;,  &quot;pages/logs/logs&quot;] 小程序提供的 API 跳转wx.navigateTo(OBJECT)123wx.navigateTo(&amp;#123;  url: &apos;page/index?id=1&apos;&amp;#125;); 保留当前页面，跳转">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,36 +155,77 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-微信小程序/微信小程序（一）：页面跳转" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/05/微信小程序/微信小程序（一）：页面跳转/" class="archive-article-date">
-  	<time datetime="2018-08-05T14:44:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/05/微信小程序/微信小程序（一）：页面跳转/">微信小程序（一）：页面跳转</a>
+    <h1 class="article-title" itemprop="name">
+      微信小程序（一）：页面跳转
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/05/微信小程序/微信小程序（一）：页面跳转/" class="archive-article-date">
+  	<time datetime="2018-08-05T14:44:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>微信小程序 跳转页面的方法详解</p>
+<p>备注：<br>所有页面跳转的地址需要在app.json里面pages配置路径</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"pages"</span>:[</span><br><span class="line">  <span class="string">"pages/index"</span>,</span><br><span class="line">  <span class="string">"pages/logs/logs"</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h2 id="小程序提供的-API-跳转"><a href="#小程序提供的-API-跳转" class="headerlink" title="小程序提供的 API 跳转"></a>小程序提供的 API 跳转</h2><h3 id="wx-navigateTo-OBJECT"><a href="#wx-navigateTo-OBJECT" class="headerlink" title="wx.navigateTo(OBJECT)"></a>wx.navigateTo(OBJECT)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateTo(&#123;</span><br><span class="line">  url: <span class="string">'page/index?id=1'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>保留当前页面，跳转到应用内的某个页面</p>
+<p>说明：</p>
+<pre><code>1. 该方法可以使用wx.navigateBack关闭当前页面，返回上一页面或多级页面，通过设置delta决定需要返回几层。
+2. 调用 navigateTo 跳转时，调用该方法的页面会被加入堆栈。
+3. 可通过 getCurrentPages() 获取当前的页面栈。
+4. 由于小程序中要求页面的层级最多只能有五层，而这种方式保留当前页面，也就是说以这种方式跳转页面，最多只能打开5个页面。
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateBack(&#123;</span><br><span class="line">  delta: <span class="number">2</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>由此可延伸要获取当前页面的路径，方式如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pages = getCurrentPages(); <span class="comment">// 获取加载的页面</span></span><br><span class="line"><span class="keyword">const</span> currentPage = pages[pages.length - <span class="number">1</span>]; <span class="comment">// 获取当前页面的对象</span></span><br><span class="line"><span class="keyword">const</span> url = currentPage.route; <span class="comment">// 当前页面url</span></span><br><span class="line"><span class="keyword">var</span> options = currentPage.options; <span class="comment">// 获取url中所带的参数</span></span><br></pre></td></tr></table></figure>
+<h3 id="wx-redirectTo-OBJECT"><a href="#wx-redirectTo-OBJECT" class="headerlink" title="wx.redirectTo(OBJECT)"></a>wx.redirectTo(OBJECT)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.redirectTo(&#123;</span><br><span class="line">  url: <span class="string">'page/index?id=1'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>关闭当前页面，跳转到应用内的某个页面。</p>
+<p>注意：redirectTo打开的页面不会被加入堆栈，所以在页面A中使用navigateTo跳转到页面B，页面B中使用redirectTo跳转到页面C，页面C中使用navigateBack返回的上一页面应是A</p>
+<h3 id="wx-switchTab-OBJECT"><a href="#wx-switchTab-OBJECT" class="headerlink" title="wx.switchTab(OBJECT)"></a>wx.switchTab(OBJECT)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.switchTab(&#123;</span><br><span class="line">  url: <span class="string">'page/index'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面</p>
+<p>注意：跳转到的tabBar页面，需要在app.json中注册过的tabBar页面</p>
+<h3 id="wx-reLaunch-OBJECT"><a href="#wx-reLaunch-OBJECT" class="headerlink" title="wx.reLaunch(OBJECT)"></a>wx.reLaunch(OBJECT)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.reLanch(&#123;</span><br><span class="line">  url: <span class="string">'page/index'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>关闭所有页面，打开到应用内的某个页面， 一般应用于返回首页。</p>
+<h2 id="wxml-页面组件跳转"><a href="#wxml-页面组件跳转" class="headerlink" title="wxml 页面组件跳转"></a>wxml 页面组件跳转</h2><p>navigator 组件，可以通过设置open-type属性指明页面跳转方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// navigator 组件默认的 open-type 为 navigate </span><br><span class="line">&lt;navigator url=&quot;pages/index&quot;&gt;跳转到新页面&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">// redirect 对应 API 中的 wx.redirect 方法</span><br><span class="line">&lt;navigator url=&quot;pages/index&quot; open-type=&quot;redirect&quot; &gt;在当前页打开&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">// switchTab 对应 API 中的 wx.switchTab 方法</span><br><span class="line">&lt;navigator url=&quot;/page/index&quot; open-type=&quot;switchTab&quot;&gt;切换 Tab&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">// reLanch 对应 API 中的 wx.reLanch 方法</span><br><span class="line">&lt;navigator url=&quot;pages/index&quot; open-type=&quot;redirect&quot; &gt;关闭所有页面，打开到应用内的某个页面&lt;/navigator&gt;</span><br><span class="line"></span><br><span class="line">// navigateBack 对应 API 中的 wx.navigateBack 方法</span><br><span class="line">&lt;navigator url=&quot;/page/index&quot; open-type=&quot;navigateBack&quot;&gt;关闭当前页面，返回上一级页面或多级页面&lt;/navigator&gt;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,19 +237,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/05/微信小程序/微信小程序（一）：页面跳转/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/08/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -226,9 +359,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
